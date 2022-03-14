@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Salary Prediction Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body background="/static/images/background1.jpg">
+<!-- Input Form -->
+<div  class="input form">
+  <form action="{{url_for('predict')}}"method="post" id="input head">
+    <h2 id="heading" style="margin-top: -200px;">       Predict the salary of an employee                     </h2>
+    <h5 id="input">Age</h5>
+    <input type="int" name="Age" place holder="Age">
+     <h5 id="input">Experience in years</h5>
+    <input type="int" name="YearsofExperience " place holder="Experience in years">
+     <!-- <h5 id="input">Current Salary</h5>
+    <input type="int" name="Salary" place holder="Current Salary"> -->
+     <h5 id="input">Special Projects Count</h5>
+    <input type="int" name="SpecialProjectsCount" place holder="Special Projects Count">
+    <h5 id="input">Race Description</h5>
+    
+    <select name="RaceDesc"> 
+        <option value="0">American Indian or Alaska Native</option> 
+        <option value="1">Asian</option> 
+        <option value="2">Black or African American</option> 
+        <option value="3">Hispanic </option>
+        <option value="4">Two or more races </option> 
+        <option value="5">White </option> 
+    </select> 
+
+    <h5 id="input">Department</h5>
+    <select name="DepartmentID"> 
+      <option value="0">Admin Offices</option> 
+      <option value="1">Executive Office</option> 
+      <option value="2">IT/IS</option> 
+      <option value="3">Production</option>
+      <option value="5">Software Engineering</option> 
+  </select>  
+
+    <!-- <input type="int" name="DeptID " place holder="Department"> -->
+    <h5 id="input">Position</h5>
+    <!-- <input type="int" name="PositionID" place holder="Position"> -->
+    <select name="PositionID"> 
+      <option value="1">Accountant I</option> 
+      <option value="2">Administrative Assistant</option> 
+     <option value="3">Area Sales Manager</option> 
+      <option value="4">BI Developer</option> 
+      <option value="5">BI Director</option> 
+      <option value="6">CIO</option> 
+      <option value="7">Data Analyst</option> 
+      <option value="8">Data Architect</option> 
+      <option value="9">Database Administrator</option> 
+      <option value="10">Director of Operations </option> 
+      <option value="11">Director of Sales </option> 
+      <option value="12">Enterprise Architect</option> 
+      <option value="13">IT Director</option> 
+      <option value="14">IT Manager / DB</option> 
+      <option value="15">IT Manager / Infra</option> 
+      <option value="16">IT Manager / Support</option> 
+      <option value="17">IT Support</option> 
+      <option value="18">Network Engineer </option> 
+      <option value="19">President & CEO</option> 
+      <option value="20">Principal Data Architect </option> 
+      <option value="21">Production Manager</option> 
+      <option value="23">Production Technician I</option> 
+      <option value="24">Production Technician II</option> 
+      <option value="25">Sales Manager</option> 
+      <option value="26">Senior BI Developer</option> 
+      <option value="27">Shared Services Manager</option> 
+      <option value="28">Software Engineer</option> 
+      <option value="29">Software Engineering Manager</option> 
+      <option value="30">Sr. Accountant</option>  
+      <option value="31">Sr. DBA</option> 
+      <option value="32">Sr. Network Engineer</option>  
+    </select>  
+    <h5 id="input">PerformanceScore</h5>
+    <!-- <input type="int" name="PerfScoreID" place holder="PerformanceScore"> -->
+    <select name="PerfScoreID"> 
+      <option value="1">Exceeds</option> 
+      <option value="2">Fully Meets</option> 
+      <option value="3">Needs Improvement</option> 
+      <option value="4">PIP</option>
+       
+  </select> 
+    <br>
+    <br>
+    <button id="submit" type="submit">Predict</button>
+  </form>
+ 
+</div>
+   
+</body>
+</html>
