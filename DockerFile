@@ -9,9 +9,9 @@ COPY requirements.txt /app/
 RUN pip install -r ./requirements.txt
 
 # API server
-COPY server.py /app/
+COPY Salary_web.py /app/
 COPY models/Salary_Predict.pkl /app/models/
 # Container port on which the server will be listening
 EXPOSE 5000
 # Launch server app
-ENTRYPOINT python ./server.py
+ENTRYPOINT python ./Salary_web.py
